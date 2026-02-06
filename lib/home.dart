@@ -194,9 +194,10 @@ class _HomePageState extends State<HomePage>{
                 child: AnimatedScale(scale: _hoveredIndex==index ? 1.08:1.0, 
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOut,
-              child: Image.asset(
+              child: FadeInImage.assetNetwork(
+                placeholder: 
                   "../assets/images/news.jpg",
-                  
+                  image:'https://wallpapers.com/images/featured/information-technology-nucb4z97b3q78mjk.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -239,11 +240,13 @@ class _HomePageState extends State<HomePage>{
                   // Title
                   Text(
                     "Breaking: Major Tech Company Announces Revolutionary AI",
+                    
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: isMobile ? 16: 18,
                       fontWeight: FontWeight.bold,
+                      color: _hoveredIndex==index ? Colors.purpleAccent : Colors.black
                     ),
                   ),
 

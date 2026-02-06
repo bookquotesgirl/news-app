@@ -66,9 +66,10 @@ class NewsDetailPage extends StatelessWidget {
                 child: AnimatedScale(scale: 1.0, 
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOut,
-              child: Image.asset(
+              child: FadeInImage.assetNetwork(
+                placeholder: 
                   "../assets/images/news.jpg",
-                  
+                  image:'https://wallpapers.com/images/featured/information-technology-nucb4z97b3q78mjk.jpg',
                   fit: BoxFit.cover,
                 ),
               ),

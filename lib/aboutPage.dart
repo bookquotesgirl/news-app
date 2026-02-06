@@ -71,7 +71,7 @@ class _AboutPageState extends State<AboutPage>{
        
              Icon(Icons.newspaper_outlined,color: Colors.white,size: 48,),
             SizedBox(height: 8,),
-          Text('About NewsHub', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: isMobile ?32: 48),),
+          Text('About NewsHub', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 48),),
           
       
       SizedBox(height: 10,),
@@ -79,7 +79,7 @@ class _AboutPageState extends State<AboutPage>{
       Text("Your trusted source for breaking news and in-depth stories from around the world",
       textAlign: TextAlign.center,
     
-      style: TextStyle(color: Color(0xFFF3F4F6),fontSize:22,),
+      style: TextStyle(color: Color(0xFFF3F4F6),fontSize:14,),
       ),
           ],
       ),
@@ -119,11 +119,11 @@ class _AboutPageState extends State<AboutPage>{
                       child: Padding(padding: 
                       EdgeInsets.all(10),
                       child:
-                      Icon(Icons.circle_outlined,color: Colors.white,size: 38,),
+                      Icon(Icons.circle_outlined,color: Colors.white,size: 24,),
                          ),
                          ),
                          SizedBox(width: 10,),
-                         Text("Our Mission",style: TextStyle(fontSize: 38,fontWeight: FontWeight.bold),),
+                         Text("Our Mission",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
 
             
                 ],
@@ -131,7 +131,7 @@ class _AboutPageState extends State<AboutPage>{
               SizedBox(height: 20,),
               Text("At NewsHub, we believe in delivering accurate, timely, and unbiased news to our readers. Our mission is to keep you informed about the events that matter most, from breaking news to in-depth analysis of global affairs."
 '\n\n'
-"We are committed to journalistic excellence and strive to present multiple perspectives on every story, empowering you to form your own informed opinions",style: TextStyle(fontSize: 25),)
+"We are committed to journalistic excellence and strive to present multiple perspectives on every story, empowering you to form your own informed opinions",style: TextStyle(fontSize: 16),)
             ],
            ),
            ),
@@ -174,17 +174,17 @@ class _AboutPageState extends State<AboutPage>{
                       child: Padding(padding: 
                       EdgeInsets.all(10),
                       child:
-                      Icon(Icons.people_outline,fontWeight: FontWeight.bold,color:  Colors.blue,size: 38,),
+                      Icon(Icons.people_outline,fontWeight: FontWeight.bold,color:  Colors.blue,size: 24,),
                          ),
                          ),
                          SizedBox(width: 10,),
-                         Text("Our Team",style: TextStyle(fontSize: 38,fontWeight: FontWeight.bold),),
+                         Text("Our Team",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
 
             
                 ],
               ),
               SizedBox(height: 20,),
-              Text("Our team of experienced journalists and editors work around the clock to bring you the most important stories from across the globe. With decades of combined experience, we're dedicated to excellence in journalism.",style: TextStyle(fontSize: 25),)
+              Text("Our team of experienced journalists and editors work around the clock to bring you the most important stories from across the globe. With decades of combined experience, we're dedicated to excellence in journalism.",style: TextStyle(fontSize: 16),)
             ],
            ),
            ),
@@ -225,17 +225,17 @@ class _AboutPageState extends State<AboutPage>{
                       child: Padding(padding: 
                       EdgeInsets.all(10),
                       child:
-                      Icon(Icons.book_outlined,fontWeight: FontWeight.bold, color: Colors.purple,size: 38,),
+                      Icon(Icons.book_outlined,fontWeight: FontWeight.bold, color: Colors.purple,size: 24,),
                          ),
                          ),
                          SizedBox(width: 5,),
-                         Text("Our Standards",style: TextStyle(fontSize: 38,fontWeight: FontWeight.bold),),
+                         Text("Our Standards",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
 
             
                 ],
               ),
               SizedBox(height: 20,),
-              Text("We uphold the highest standards of journalistic integrity. Every story is thoroughly researched, fact-checked, and reviewed by our editorial team before publication. Accuracy and fairness are our top priorities.",style: TextStyle(fontSize: 25),)
+              Text("We uphold the highest standards of journalistic integrity. Every story is thoroughly researched, fact-checked, and reviewed by our editorial team before publication. Accuracy and fairness are our top priorities.",style: TextStyle(fontSize: 16),)
             ],
            ),
            ),
@@ -274,9 +274,10 @@ class _AboutPageState extends State<AboutPage>{
                 child: AnimatedScale(scale:1.0, 
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOut,
-              child: Image.asset(
-                  "../assets/images/people.jpeg",
-                  
+              child: FadeInImage.assetNetwork(
+                placeholder:
+                '../assets/images/people.jpeg',
+                image: 'https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtfGVufDF8fHx8MTc2OTYwOTUyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -293,7 +294,7 @@ class _AboutPageState extends State<AboutPage>{
                     "Join our community",
                     
                     style: TextStyle(
-                      fontSize: 38,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -305,7 +306,7 @@ class _AboutPageState extends State<AboutPage>{
 
                     
                     style: TextStyle(
-                     fontSize: 25,
+                     fontSize: 16,
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -350,15 +351,15 @@ class _AboutPageState extends State<AboutPage>{
            child: 
             Column(
             children: [
-             Text("Get in touch",style: TextStyle(fontSize: 39,color: Colors.white),),
+             Text("Get in touch",style: TextStyle(fontSize: 24,color: Colors.white),),
              Row(
               children: [
                 Icon(Icons.email_outlined,color: Colors.white,size: 40,),
                 SizedBox(width: 10,),
                 Column(
                   children: [
-                    Text("Email",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                    Text("abebe@gmail.com",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
+                    Text("Email",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                    Text("abebe@gmail.com",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
                   ],
                 )
               ],
@@ -371,8 +372,8 @@ class _AboutPageState extends State<AboutPage>{
                 SizedBox(width: 10,),
                 Column(
                   children: [
-                    Text("Phone",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                    Text("09-00-00-00-00",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
+                    Text("Phone",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                    Text("09-00-00-00-00",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
                   ],
                 )
               ],
@@ -384,8 +385,8 @@ class _AboutPageState extends State<AboutPage>{
                 SizedBox(width: 10,),
                 Column(
                   children: [
-                    Text("Address",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                    Text("Addis Ababa,Ethiopia",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
+                    Text("Address",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold),),
+                    Text("Addis Ababa,Ethiopia",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 233, 232, 232)),),
                   ],
                 )
               ],
